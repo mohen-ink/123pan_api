@@ -2,9 +2,7 @@ import http.client
 import json
 from utils import format_file_size
 
-class PanAPI:
-    """123云盘API封装类"""
-    
+class API_123pan:
     BASE_URL = "open-api.123pan.com"
     
     def __init__(self, token=None):

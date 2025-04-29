@@ -29,7 +29,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("123云盘客户端")
         self.setGeometry(100, 100, 1000, 600)
         
-        # 设置应用样式表 - Windows 11风格
+        # 设置应用样式表
         self.apply_style()
         
         # 创建中央部件和布局
@@ -72,7 +72,7 @@ class MainWindow(QMainWindow):
         self.update_path_navigation()
     
     def apply_style(self):
-        """应用Windows 11风格样式"""
+
         self.setStyleSheet("""
             QMainWindow, QDialog {
                 background-color: #f5f5f5;
@@ -121,7 +121,7 @@ class MainWindow(QMainWindow):
                 padding: 6px;
                 background-color: #ffffff;
             }
-        """)  # 这里添加了结束的三个引号
+        """)
     
     def create_navigation_layout(self):
         """创建导航区域布局"""
@@ -212,7 +212,7 @@ class MainWindow(QMainWindow):
             self.update_login_button()
             self.update_user_info()
             self.list_files()
-            self.status_label.setText(f"自动登录成功，{message}")
+            self.status_label.setText(f"自动登录成功，token有效期剩余{message}")
     
     def login(self):
         """登录或退出登录"""
